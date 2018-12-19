@@ -8,10 +8,14 @@
  * Modified By: YH (1147499565@qq.com)
  * -----
  * Description
- * node学习catalog
+ * node模块调用继承
  * 
  */
-// 1.node.js 安装和node服务创建，实现helloworld
-// 2.函数调用(文件内部函数调用和外部文件调用)
-// 3.模块的调用
-
+var User = require ('./User')
+ function Teacher ( id,name,age){
+     User.apply(this,[id,name,age])//当前继承user这个类
+     this.teach=function(res){
+        res.write(this.name+'讲课')
+     }
+ }
+module.exports = Teacher

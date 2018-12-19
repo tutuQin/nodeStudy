@@ -8,10 +8,15 @@
  * Modified By: YH (1147499565@qq.com)
  * -----
  * Description
- * node学习catalog
+ * node模块调用
  * 
  */
-// 1.node.js 安装和node服务创建，实现helloworld
-// 2.函数调用(文件内部函数调用和外部文件调用)
-// 3.模块的调用
 
+module.exports = { 
+    login:function(req,res){
+        res.write('我是登录')
+    },
+    zhuce:function(req,res){
+        res.write('我是注册')
+    },
+}
