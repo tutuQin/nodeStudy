@@ -31,7 +31,9 @@ module.exports = {
     writefile:function(path,data,callback){ //写文件
         fs.writeFile(path,data,function(err){
             if(err){
-                throw err
+                // throw err
+                console.log('bbb'+err)
+                callback('文件不存在异步捕获异常')
             }
             console.log('文件已保存')
 
