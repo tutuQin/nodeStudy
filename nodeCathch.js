@@ -24,6 +24,7 @@ http.createServer(function(request,response){
             router[pathname](request,response)
         }catch(err){
             console.log('aaa',+err)
+            console.log('aaa1111',+err)
             response.writeHead(200,{'Content-Type':'text/html; charset=utf-8'}) //定义请求的头部
             response.write(err.toString())
             response.end(''); //请求完成后必须终止请求，否则浏览器会一直处于请求状态
